@@ -1,8 +1,8 @@
 {
-    "name": "2amigos/yii2-gallery-widget",
+    "name": "vensonk/yii2-gallery-widget",
     "description": "Blueimp gallery widget for the Yii framework",
     "keywords": [
-        "2amigos",
+        "vensonk",
         "yii",
         "yii2",
         "yii 2",
@@ -14,9 +14,9 @@
     "homepage": "https://github.com/2amigos/yii2-gallery-widget",
     "authors": [
         {
-            "name": "2amigOS! Consulting Group",
-            "email": "hola@2amigos.us",
-            "homepage": "http://2amigos.us",
+            "name": "Life Net Inc.",
+            "email": "venson@thelifenet.com",
+            "homepage": "http://www.thelifenet.com",
             "role": "Developer"
         }
     ],
