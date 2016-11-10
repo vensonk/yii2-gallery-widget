@@ -16,6 +16,9 @@ use yii\web\AssetBundle;
  */
 class DosamigosAsset extends AssetBundle
 {
+    public $css = [
+        'style-gallery.css',
+    ];
     public $js = [
         'dosamigos-blueimp-gallery.js',
     ];
