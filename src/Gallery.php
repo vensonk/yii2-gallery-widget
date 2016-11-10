@@ -55,6 +55,8 @@ class Gallery extends Widget
      * @var bool whether to display the controls on initialization
      */
     public $showControls = true;
+    
+    public $deleteOptions = []; // Added by Venson
 
     /**
      * @inheritdoc
@@ -100,6 +102,7 @@ class Gallery extends Widget
         foreach ($this->items as $item) {
             $items[] = $this->renderItem($item);
         }
+        Html::addCssClass($this->options, 'gallery');
         return Html::tag('div', implode("\n", array_filter($items)), $this->options);
     }
 
@@ -120,8 +123,24 @@ class Gallery extends Widget
         $options = ArrayHelper::getValue($item, 'options', []);
         $imageOptions = ArrayHelper::getValue($item, 'imageOptions', []);
         Html::addCssClass($options, 'gallery-item');
-
-        return Html::a(Html::img($src, $imageOptions), $url, $options);
+        
+        $deleteOptions = ArrayHelper::getValue($item, 'deleteOptions', []);
+        
+        if (empty($deleteOptions)) {
+            return Html::a(Html::img($src, $imageOptions), $url, $options);     
+        } else {
+            $newImage = Html::a(Html::img($src, $imageOptions), $url, $options);
+            $newLink = Html::a('<div class="glyphicon glyphicon-trash gallery-delete-icon"></div>',
+                    $deleteOptions,
+                    [
+                        'data' => [
+                            'method' => 'post'
+                        ],
+                        'class' => 'gallery-delete-link'
+                    ]
+                );
+            return $newImage . $newLink;
+        }
     }
 
     /**
