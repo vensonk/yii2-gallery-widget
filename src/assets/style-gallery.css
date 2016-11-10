@@ -1,0 +1,13 @@
+.gallery-delete-link {
+	position: relative;
+	left: -21px;
+	margin-right: -19px;
+}
+.gallery-delete-icon {
+	vertical-align:top;
+	background-color:white;
+	padding:3px;
+}
+.gallery-item img {
+	padding-bottom: 5px;
+}
