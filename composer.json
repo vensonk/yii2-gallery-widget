@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "dosamigos\\gallery\\": "src"
+            "vensonk\\gallery\\": "src"
         }
     },
     "extra": {
